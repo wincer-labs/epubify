@@ -572,7 +572,9 @@ def build_epub(book: Book, output_path: Path) -> None:
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Convert TXT novel to EPUB.")
+    parser = argparse.ArgumentParser(
+        description="Convert novel TXT to EPUB 3 with automatic metadata and TOC parsing."
+    )
     parser.add_argument("input", help="Input TXT file path")
     parser.add_argument("-o", "--output", help="Output EPUB file path")
     return parser.parse_args(argv)
